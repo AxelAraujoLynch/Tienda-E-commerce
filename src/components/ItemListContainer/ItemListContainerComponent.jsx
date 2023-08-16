@@ -1,4 +1,3 @@
-import styles from "./ItemListContainer.css";
 
 const ItemListContainerComponent = ({ greeting }) => {
   return (
