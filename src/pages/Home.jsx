@@ -7,26 +7,26 @@ function Home() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    // Simulamos una demora de carga
     setTimeout(() => {
-      // Importa directamente el archivo JSON
       import("../assets/data/products.json")
         .then((data) => {
-          setProducts(data.default); // data.default contiene el arreglo de productos
+          setProducts(data.default);
           setLoading(false);
         })
         .catch((error) => {
           console.error("Error al cargar los productos:", error);
           setLoading(false);
         });
-    }, 1000); // Simulamos una demora de 1 segundo
+    }, 1000);
   }, []);
 
   return loading ? (
     <LoaderComponent />
   ) : (
     <div>
-      <h1>Lista de Productos</h1>
+      <h1 className="d-flex justify-content-center" id="TituloHome">
+        Lista de Productos
+      </h1>
       <ItemListContainer productsData={products} />
     </div>
   );

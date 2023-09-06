@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import ItemListContainer from "../components/ItemListContainer/ItemListContainer";
 import LoaderComponent from "../components/LoaderComponent/LoaderComponent";
-import productsData from "../assets/data/products.json"; // Importa los datos del archivo JSON
+import productsData from "../assets/data/products.json"; 
 
 const Category = () => {
   const [products, setProducts] = useState([]);
@@ -11,7 +11,7 @@ const Category = () => {
   const { categoryId } = useParams();
 
   useEffect(() => {
-    // Filtra los productos del archivo JSON según la categoría
+  
     const filteredProducts = productsData.filter(
       (product) => product.category === categoryId
     );

@@ -1,3 +1,37 @@
+
+@font-face {
+  font-family: LEMON;
+  src: url("/src/assets/fonts/LEMONMILK-Bold.ttf");
+}
+
+@font-face {
+  font-family: sheen;
+  src: url("../src/assets/fonts/Glossy\ Sheen\ Shadow\ DEMO.ttf");
+}
+
+
 body{
     overflow-x: hidden;
   }
+
+
+  #TituloHome {
+
+    font-size: 1.3rem !important;
+    color: rgb(116, 110, 110);
+    margin-top: 10px  ;
+ 
+
+     }
+
+
+     #Marca {
+
+      font-family: LEMON;
+      font-size: 1.3rem !important;
+      color: rgb(211, 217, 29);
+
+    }
+
+
+ 

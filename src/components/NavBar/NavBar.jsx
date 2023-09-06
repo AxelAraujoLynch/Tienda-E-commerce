@@ -9,10 +9,10 @@ import { Link } from "react-router-dom";
 
 const NavBar = () => {
   return (
-    <Navbar expand="lg" bg="warning" variant="dark" className="me-3 ms-0">
+    <Navbar expand="lg" bg="dark" variant="dark" className="me-3 ms-0">
       <Container>
         <Navbar.Brand>
-          <Link to="/">TrendyThreads</Link>
+          <Link to="/" id="Marca" >TrendyThreads</Link>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">

@@ -12,16 +12,16 @@ const ItemListContainer = ({ productsData }) => {
     <div className={styles.productContainer}>
       {productsData.map((product) => {
         return (
-          <Card style={{ width: "18rem" }} key={product.id}>
-            {/* Utiliza la primera imagen del campo "images" en lugar de un solo valor */}
+          <Card className="mx-auto text-center mb-5" style={{ width: "18rem" }} key={product.id}>
+        
             <Card.Img variant="top" src={product.images} />
             <Card.Body>
               <Card.Title>{product.title}</Card.Title>
               <Card.Text>{product.description}</Card.Text>
               <Card.Text>Precio: ${product.price}</Card.Text>
               <Card.Text>Calificación: {product.rating}</Card.Text>
-              <Button
-                variant="primary"
+              <Button id="Detalles" className=" mx-auto text-center bg-succes text-danger"
+                variant="warning"
                 onClick={() => navigate(`/item/${product.id}`)}
               >
                 Detalles
