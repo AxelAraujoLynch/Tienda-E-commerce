@@ -20,7 +20,7 @@ const ItemListContainer = ({ productsData }) => {
               <Card.Text>{product.description}</Card.Text>
               <Card.Text>Precio: ${product.price}</Card.Text>
               <Card.Text>Calificación: {product.rating}</Card.Text>
-              <Button id="Detalles" className=" mx-auto text-center bg-succes text-danger"
+              <Button id="Detalles" className=" mx-auto text-center bg-succes text-white fw-italic"
                 variant="warning"
                 onClick={() => navigate(`/item/${product.id}`)}
               >

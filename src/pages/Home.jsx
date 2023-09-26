@@ -1,35 +1,12 @@
-import React, { useState, useEffect } from "react";
 import ItemListContainer from "../components/ItemListContainer/ItemListContainer";
 import LoaderComponent from "../components/LoaderComponent/LoaderComponent";
+import { useCollection } from "../hooks/useCollection"
 
-function Home() {
-  const [products, setProducts] = useState([]);
-  const [loading, setLoading] = useState(true);
+const Home = () => {
 
-  useEffect(() => {
-    setTimeout(() => {
-      import("../assets/data/products.json")
-        .then((data) => {
-          setProducts(data.default);
-          setLoading(false);
-        })
-        .catch((error) => {
-          console.error("Error al cargar los productos:", error);
-          setLoading(false);
-        });
-    }, 1000);
-  }, []);
+  const {data, loading} = useCollection("products")
 
-  return loading ? (
-    <LoaderComponent />
-  ) : (
-    <div>
-      <h1 className="d-flex justify-content-center" id="TituloHome">
-        Lista de Productos
-      </h1>
-      <ItemListContainer productsData={products} />
-    </div>
-  );
+return loading ? <LoaderComponent /> : <ItemListContainer productsData={data} />
 }
 
-export default Home;
+export default Home 
