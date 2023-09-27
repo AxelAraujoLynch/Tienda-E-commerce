@@ -1,7 +1,6 @@
 import React from "react";
 import styles from "../App.module.scss";
 
-
 import "bootstrap/dist/css/bootstrap.min.css";
 
 const MainLayout = ({ children }) => {

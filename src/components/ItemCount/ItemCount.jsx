@@ -17,12 +17,22 @@ const ItemCount = () => {
   };
 
   return (
-    <div className="text-dark fw-italic" >
-      <button className="bg-danger text-white fw-italic btn-lg" onClick={handleRemoveProduct}>Quitar</button>
-      <label style={{ margin:20, fontSize: "1.5rem", fontWeight: "italic" }}>
+    <div className="text-dark fw-italic">
+      <button
+        className="bg-danger text-white fw-italic btn-lg"
+        onClick={handleRemoveProduct}
+      >
+        Quitar
+      </button>
+      <label style={{ margin: 20, fontSize: "1.5rem", fontWeight: "italic" }}>
         {count}
       </label>
-      <button className="bg-success text-white fw-italic btn-lg" onClick={handleAddProduct}>Agregar</button>
+      <button
+        className="bg-success text-white fw-italic btn-lg"
+        onClick={handleAddProduct}
+      >
+        Agregar
+      </button>
     </div>
   );
 };
